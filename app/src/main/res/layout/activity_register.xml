@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Registration"
+    android:background="@drawable/bg3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+//Describe the layout and style for the text//
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="262dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:shadowColor="#40C4FF"
+        android:text="Register Here"
+        android:textColor="#9C1F1F"
+        android:textColorHighlight="#FFFF00"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="37dp" />
+    //Describe the attributes for the text *FIRSTNAME*//
+    //Describe the attributes for the text *LASTNAME*//
+
+    <EditText
+        android:id="@+id/fn"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t1" />
+
+    <EditText
+        android:id="@+id/ln"
+        android:layout_width="250dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/fn"
+        app:layout_constraintStart_toStartOf="@+id/fn"
+        app:layout_constraintTop_toBottomOf="@+id/fn" />
+    //Describe the attributes for the text *ADDRESS*//
+
+    //Describe the attributes for the text *EMAIL*//
+
+    //Describe the attributes for the text *PASSWORD*//
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/ln"
+        app:layout_constraintTop_toBottomOf="@+id/ln" />
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Password"
+        android:inputType="textPersonName|textPassword"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <Button
+        android:id="@+id/btn.reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="248dp"
+        android:background="@color/black"
+        android:text="Register"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass"
+        app:layout_constraintVertical_bias="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout >

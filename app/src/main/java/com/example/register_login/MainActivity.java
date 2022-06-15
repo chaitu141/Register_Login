@@ -1,0 +1,39 @@
+package com.example.register_login;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+
+public class MainActivity extends AppCompatActivity {
+    //Set time for splash screen
+    private static int SPLASH_TIME_OUT=4000;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //Setting layout view//
+        setContentView(R.layout.activity_main);
+        try {
+            this.getSupportActionBar().hide();
+
+        } catch (NullPointerException e) {
+        }
+        new Handler().postDelayed(new Runnable() {
+
+         @Override
+         //Create class for intent//
+            public void run() {
+                //creating intent
+                Intent intent = new Intent(MainActivity.this, Home_page.class);
+                startActivity(intent);
+                finish();
+         }
+            },SPLASH_TIME_OUT);
+
+
+
+    }
+}
